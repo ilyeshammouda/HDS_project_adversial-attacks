@@ -12,9 +12,19 @@ from interface import BaseOptimizer
 from Cosamp import cosamp
 from help_function import ISTA_ad,IHT_ad,IHT_classique,debiased_Lasso,Lasso_reg,True_grad_SparseQuadric,True_grad_square_of_the_difference_support_S,True_grad_norm_with_a_Gaussian_matrix
 import projection as proj
-from MD import AcceleratedMethod
 import warnings
 import math
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.utils.data as data
+import torch.optim as optim
+# Torchvision
+import torchvision
+
+
+
+
 
 
 class ZORO_nest(BaseOptimizer):
